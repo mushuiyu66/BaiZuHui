@@ -1,0 +1,15 @@
+# 复制到 src/main/resources/application-local.yml
+# 启动时加上：--spring.profiles.active=local
+# 该文件已被 .gitignore 忽略，请勿提交真实密钥
+
+spring:
+  datasource:
+    username: root
+    password: your-local-db-password
+
+jwt:
+  secret: your-local-jwt-secret
+
+wechat:
+  appid: your-wechat-appid
+  secret: your-wechat-secret

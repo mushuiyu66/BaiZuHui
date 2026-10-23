@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.baizuhui.mapper.ProductMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.baizuhui.domain.Product">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="category_id" column="category_id" jdbcType="BIGINT"/>
+            <result property="brand_id" column="brand_id" jdbcType="BIGINT"/>
+            <result property="price" column="price" jdbcType="DECIMAL"/>
+            <result property="original_price" column="original_price" jdbcType="DECIMAL"/>
+            <result property="stock" column="stock" jdbcType="INTEGER"/>
+            <result property="sales" column="sales" jdbcType="INTEGER"/>
+            <result property="weight" column="weight" jdbcType="DECIMAL"/>
+            <result property="status" column="status" jdbcType="TINYINT"/>
+            <result property="is_hot" column="is_hot" jdbcType="TINYINT"/>
+            <result property="is_new" column="is_new" jdbcType="TINYINT"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="main_image" column="main_image" jdbcType="VARCHAR"/>
+            <result property="detail_images" column="detail_images" jdbcType="OTHER"/>
+            <result property="specs" column="specs" jdbcType="OTHER"/>
+            <result property="created_at" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="updated_at" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,category_id,
+        brand_id,price,original_price,
+        stock,sales,weight,
+        status,is_hot,is_new,
+        description,main_image,detail_images,
+        specs,created_at,updated_at
+    </sql>
+</mapper>
